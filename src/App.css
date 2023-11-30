@@ -1,38 +1,148 @@
+/* Default (Light Mode) */
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+  background: url("https://source.unsplash.com/random") center/cover no-repeat
+    fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Light Mode */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
 .App {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 80px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 80px;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 240px;
+  margin: 20px auto;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.game-info {
+  margin-top: 20px;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+/* Add more styling for dark mode if needed */
+/* Rest of your styles */
+
+/* Popup Styles */
+.popup {
+  width: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+}
+
+.popup.active {
+  display: block;
+}
+
+.popup-content {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.popup-message {
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.popup-emoji {
+  font-size: 36px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.popup button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #4caf50; /* Green */
   color: white;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.popup button:hover {
+  background-color: #45a049; /* Darker green */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.winner-name-popup {
+  color: rgb(224, 91, 9);
+  font-weight: bold;
 }
+.toggle-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  outline: none;
+}
+/* Rest of your styles */
+
+/* Player Name Styles */
+.player-name {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.winner-name {
+  color: rgb(213, 93, 13);
+  font-weight: bold;
+}
+
+/* Rest of your styles */
